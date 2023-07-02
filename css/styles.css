@@ -1,0 +1,161 @@
+/* Basic styling */
+* { 
+    box-sizing: border-box; /* Padding and Border are included in the width & height */
+    /* Clear browser specific formatting */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 15px "Lato", sans-serif;
+    color:white;
+    /* Background Properties */
+    display: grid;
+    height: 150vh;
+    grid-template-rows: auto 1fr auto;
+    background-color: black;
+}
+
+/* Nav Styles */
+
+nav {
+    background-color: white;
+    padding: 0 15px; 
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+/* Mobile menu */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu a:hover {
+    background-color: lightgray;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 10px;
+}
+
+.toggle {
+    order: 1;
+    font-size: 20px;
+}
+
+.logo {
+    font-size: 20px;
+    padding: 7.5px 10px 7.5px 0;
+}
+
+.item {
+    /* padding: 10px; */
+    order: 2;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+.active .item {
+    display: block;
+}
+
+/* Tablet menu */
+
+@media all and (min-width: 700px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .toggle {
+        flex: 1;
+        text-align: right;
+        order: 1;
+    }
+}
+
+/* Desktop menu */
+
+@media all and (min-width: 960px) {
+    .menu {
+        align-items:flex-start;
+        flex-wrap: nowrap;
+        background: none;
+        justify-content: end;
+    }
+    .logoTxt {
+        margin-right: auto;
+        letter-spacing: .2em;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+}
+
+header {
+    /* Background img Properties */
+    background-image: url('/img/blackSand.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* Justification & Alignment */ 
+    padding: 1em;
+    min-height: 100vh;
+}
+
+.headingSep {
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    color:black;
+}
+
+main {
+    /* Background img Properties */
+    background-image: url('/img/blackStone.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    /* Justification & Alignment */ 
+    text-align: center;
+}
+
+p {
+    padding: 15px 30px 15px 30px;
+    line-height: 2em;
+}
+
+h1 {
+    padding: 15px;
+}
+
+h4 {
+    letter-spacing: .5em;
+}
+
+footer {
+    background-color:white;
+    /* Justification & Alignment */ 
+    text-align: center;
+    padding: 1em;
+    color:black;
+}
